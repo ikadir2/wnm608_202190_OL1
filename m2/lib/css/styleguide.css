@@ -1,0 +1,121 @@
+/* CSS Reset */
+*, *::after, *::before{
+	box-sizing: border-box;
+}
+
+:root{
+	--color-neutral-light: #FBF5EE;
+	--color-neutral-medium: #999;
+	--color-neutral-dark: #1D3F39;
+
+	--color-black: #000;
+	--color-white: #fff;
+
+	--header-height: 4rem;
+	--spacing: 1rem;
+
+	--font-serif: Georgia, "Times New Roman", serif;
+	--font-sans: Avenir, Arial, sans-serif;
+}
+
+body{
+	margin: 0;
+	font-size: 100%;
+	font-family: var(--font-sans);
+	background-color: var(--color-neutral-light);
+	letter-spacing: 0.02em;
+}
+
+h1,
+h2,
+h3,
+h4{
+	font-family: var(--font-serif);
+}
+
+a{
+	color: inherit;
+	font-weight: medium;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+
+
+/* Layout Classes */
+.container{
+	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.display-flex{ display: flex; }
+.display-inline-flex{ display: inline-flex; }
+.display-bloxk{ display: block; }
+.display-inline-block{ display: inline-block; }
+
+.flex-stretch{ flex: 1 1 auto; }
+.flex-none{ flex: none; }
+
+.flex-align-center{ align-items: center; }
+.flex-justify-center{ justify-content: center; }
+
+
+
+/* Component Classes */
+.nav ul{
+	list-style-type: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+
+	letter-spacing: 0.1em;
+}
+
+.navbar{
+	background-color: var(--color-neutral-dark);
+	color: var(--color-white);
+	line-height: var(--header-height);
+}
+
+	.navbar h1{
+		font-size: 1.5em;
+		margin: 0;
+		font-family: var(--font-sans);
+		letter-spacing: 0.1em;
+	}
+
+	.navbar a{
+		padding: 0 1em;
+	}
+
+
+
+/* Card Component */
+.card{
+	background-color: var(--color-white);
+	margin-top: 1em;
+	margin-bottom: 3em;
+	padding: 1em;
+
+	overflow: hidden;
+	position: relative;	
+}
+	
+	.card.soft{
+		border-radius: 0.5em;
+		box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	}
+
+
+/* Footer */
+.site-footer {
+  background-color: #10221F; 
+  color: #fff;               
+  padding: 1.5em 0;          
+  text-align: center;
+  font-size: 0.9em;
+}

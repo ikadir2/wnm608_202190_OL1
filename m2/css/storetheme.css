@@ -1,0 +1,60 @@
+:root{
+	--color-offwhite: #f4f4f4;
+}
+body{
+	background-color: var(--color-offwhite);
+}
+
+/* Hero Image */
+.hero-image {
+  height: 60vh;
+  background-image: url("/aau/wnm608/m2/img/food_1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Content */
+#article1 {
+  margin-top: 3em;    
+  margin-bottom: 3em; 
+}
+
+.two-column {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.two-column .article {
+  flex: 1 1 48%;
+  box-sizing: border-box;
+}
+
+.article small {
+  display: inline-block;      
+  padding: 2px 8px;                
+  border-radius: 4px;         
+  font-size: 0.8rem;          
+  background-color: #FFDFBF;     
+  color: #E77300;                
+}
+
+.cta {
+  margin-top: 2em;   
+  margin-bottom: 1em;        
+}
+
+.cta .btn {
+  display: inline-block;
+  background-color: #FF7F00;  
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta .btn:hover {
+  background-color: #1D3F39;  
+}
