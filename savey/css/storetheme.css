@@ -1,0 +1,127 @@
+:root{
+	--color-offwhite: #f4f4f4;
+
+	--color-neutral-light: #F8F5F2;
+	--color-neutral-medium: #DDD1CA;
+	--color-neutral-dark: #7B8684;
+
+	--color-main-light: #FFC74A;
+	--color-main-medium: #FF9743;
+	--color-main-dark: #008374;
+
+	--color-black: #303937;
+	--color-white: #FCFCFC;
+
+}
+body{
+	background-color: #EDE7E0;
+}
+
+
+
+@media (max-width: 800px){
+	.container{
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
+	.navbar h1{
+		padding-left: 0.5em;
+	}
+}
+
+@media (max-width: 400px){
+	.navbar .display-flex{
+		display: block;
+	}
+
+	.navbar .nav li{
+		line-height: 2em;
+	}
+}
+
+
+
+/* STYLEGUIDE HTML */
+.container{
+	margin-bottom: 5rem;
+}
+
+/* TABLE OF CONTENTS */
+#tableofcontents a{
+	color: var(--color-neutral-dark);
+	font-weight: 400;
+	text-decoration: none;
+}
+
+#tableofcontents .card {
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#tableofcontents .card:hover {
+    background-color: var(--color-main-medium);
+}
+
+#tableofcontents .card:hover a {
+    color: var(--color-white);
+}
+
+/* SECTION: TYPOGRAPHY */
+#headings{
+	color: var(--color-neutral-dark);
+}
+
+p{
+	color: var(--color-neutral-dark);
+}
+
+/* SECTION: COLOR */
+.maindark{
+	background-color: var(--color-main-dark);
+	color: var(--color-white);
+	text-align: center;
+}
+
+.mainmedium{
+	background-color: var(--color-main-medium);
+	color: var(--color-white);
+	text-align: center;
+}
+
+.mainlight{
+	background-color: var(--color-main-light);
+	color: var(--color-white);
+	text-align: center;
+}
+
+.white{
+	background-color: var(--color-white);
+	color: var(--color-neutral-dark);
+	text-align: center;
+}
+
+.black{
+	background-color: var(--color-black);
+	color: var(--color-white);
+	text-align: center;
+}
+
+.neutraldark{
+	background-color: var(--color-neutral-dark);
+	color: var(--color-white);
+	text-align: center;
+}
+
+/* SECTION: NAVIGATIONS */
+#navigations .card{
+	background-color: var(--color-main-dark);
+	color: var(--color-white);
+}
+
+/* SECTION: FIGURE PRODUCT */
+.figure.product{
+	border-radius: 0.5em;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	overflow: hidden;
+}
