@@ -1,9 +1,9 @@
 :root{
-	--color-offwhite: #f4f4f4;
+	--color-offwhite: #FFFDFB;
 
 	--color-neutral-light: #F8F5F2;
 	--color-neutral-medium: #DDD1CA;
-	--color-neutral-dark: #7B8684;
+	--color-neutral-dark: #6D7473;
 
 	--color-main-light: #F7AA00;
 	--color-main-medium: #FF7506;
@@ -14,7 +14,7 @@
 
 }
 body{
-	background-color: #EDE7E0;
+	background-color: var(--color-white);
 }
 
 
@@ -56,7 +56,7 @@ body{
 /* SECTION: TABLE OF CONTENTS */
 .tableofcontents{
 	margin-bottom: 5rem;
-	background-color: #DDD1CA;
+	background-color: #F0E9E1;
 	padding-bottom: 60px;
 	padding-top: 60px;
 }
