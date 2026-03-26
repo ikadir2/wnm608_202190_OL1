@@ -1,0 +1,50 @@
+[
+	{
+		"name":"Joshua Male",
+		"type":"Student",
+		"email":"joshml@art.edu",
+		"classes":[608, 620, 605]
+	},
+
+	{
+		"name":"Stephany Smith",
+		"type":"Designer",
+		"email":"stephanysmith@art.edu",
+		"classes":[601, 608, 620, 605]
+	},
+
+	{
+		"name":"Masayushita Jobs",
+		"type":"Engineering",
+		"email":"mshitajobs@art.edu",
+		"classes":[601, 608, 620, 605]
+	},
+
+	{
+		"name":"Nylon Lyn",
+		"type":"Nurse",
+		"email":"nylonlyn@art.edu",
+		"classes":[601, 608, 620, 605]
+	},
+
+	{
+		"name":"Gabriel Santos",
+		"type":"Chef",
+		"email":"gabsnts@art.edu",
+		"classes":[601, 608, 620, 605]
+	},
+
+	{
+		"name":"Ross Gellar",
+		"type":"Professor",
+		"email":"rgellar@art.edu",
+		"classes":[601, 608]
+	},
+
+	{
+		"name": "Jason Lang",
+        "type": "Student",
+        "email": "jsnlng1234@art.edu",
+        "classes": [601, 608, 605]
+    }
+]
