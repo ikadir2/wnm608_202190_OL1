@@ -1,0 +1,97 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Apr 03, 2026 at 03:49 PM
+-- Server version: 10.6.24-MariaDB-cll-lve
+-- PHP Version: 8.3.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `ikdr2aau_savey`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
+  `name` varchar(64) NOT NULL,
+  `brand` varchar(64) NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `category` varchar(32) NOT NULL,
+  `expiry_date` date NOT NULL,
+  `inventory_qty` int(11) NOT NULL,
+  `product_condition` text NOT NULL,
+  `description` text NOT NULL,
+  `ingredients` text NOT NULL,
+  `thumbnail` varchar(128) NOT NULL,
+  `images` varchar(256) NOT NULL,
+  `date_create` datetime NOT NULL,
+  `date_modify` datetime NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `brand`, `price`, `category`, `expiry_date`, `inventory_qty`, `product_condition`, `description`, `ingredients`, `thumbnail`, `images`, `date_create`, `date_modify`) VALUES
+(1, 'Pocky Chocolate Banana 2.47oz', 'Glico', 1.00, 'snack', '2026-05-29', 50, 'Box is mildly bent, product inside unaffected.', 'Two delicious flavors come together in one sweet snack. A light cocoa biscuit stick is dipped in smooth banana cream, making Pocky Banana a tasty treat to brighten your day or a friend’s.', 'Wheat flour, sugar, interesterified vegetable oil (palm kernel oil, palm oil, rapeseed oil), lactose, whole milk powder, palm oil shortening, cocoa powder, contains 1 percent or less of: artificial flavors, banana powder, lecithin, salt, yeast, leavening (sodium bicarbonate), sodium, hydroxide, beta-carotene color, papain.', 'snack_pocky_banana_thumb.jpg', 'snack_pocky_banana_1.jpg,snack_pocky_banana_2.jpg', '2026-04-03 13:48:03', '2026-04-03 13:48:03'),
+(2, 'Turtle Chips Cornsoup Flavor Big Size 5.6oz', 'Orion', 1.20, 'snack', '2026-05-22', 20, 'Good condition, packaging intact, contents sealed and fresh, with a closer-than-usual expiry date.', 'Enjoy the crunchy, multi-layered goodness of Turtle Chips in the savory Cornsoup flavor. This 5.6oz big-size bag is perfect for snacking at home, sharing with friends, or adding a flavorful crunch to your meals. Each chip delivers a crispy texture and rich, comforting cornsoup taste, making it a unique and satisfying snack for any time of day.', 'Corn, vegetable oil, sugar, salt, cornsoup seasoning (whey powder, corn extract, MSG, onion powder, garlic powder, yeast extract, spices), natural and artificial flavors, soy lecithin.', 'snack_turtle_chips_thumb.jpg', 'snack_turtle_chips_1.jpg,snack_turtle_chips_2.jpg', '2026-04-03 13:47:14', '2026-04-03 13:47:14'),
+(3, 'M&M\'s Peanut Butter Milk Chocolate Candy 9 oz', 'M&M', 1.50, 'snack', '2026-05-15', 10, 'Good condition, packaging intact, contents sealed and fresh, with a closer-than-usual expiry date.', 'Indulge in the perfect combination of creamy peanut butter and smooth milk chocolate with M&M\'s Peanut Butter. This 9oz sharing-size bag is ideal for parties, movie nights, or anytime you want a sweet, crunchy snack. Each colorful candy shell hides a rich peanut butter center, delivering a satisfying mix of flavor and texture in every bite.', 'Milk chocolate (sugar, cocoa butter, chocolate, skim milk, lactose, milkfat, soy lecithin, salt, artificial flavors), peanut butter (peanuts, sugar, hydrogenated vegetable oil, salt), sugar, corn syrup, less than 1% of cornstarch, gum arabic, coloring (includes Yellow 5 Lake, Red 40 Lake, Yellow 6 Lake, Blue 1 Lake, Blue 2 Lake, Red 40, Yellow 5, Yellow 6, Blue 1, Blue 2), dextrin, salt, artificial flavors.', 'snack_mm_peanut_butter_thumb.jpg', 'snack_mm_peanut_butter_1.jpg,snack_mm_peanut_butter_2.jpg', '2026-04-03 13:53:43', '2026-04-03 13:53:43'),
+(4, 'Buldak Spicy Chicken Noodle Carbonara Flavor Ramen 4.58 oz', 'Samyang', 2.50, 'pantry', '2026-05-20', 25, 'Good condition, packaging intact, contents sealed and fresh, with a closer-than-usual expiry date.', 'Experience the bold and fiery taste of Buldak Spicy Chicken Noodle with a creamy twist in Carbonara Flavor Ramen. This 4.58oz pack of 5 delivers spicy, savory noodles coated in a rich, cheesy carbonara sauce, perfect for a quick meal or snack that packs a punch. Enjoy the signature Korean fire noodle heat balanced with a smooth, creamy flavor for a uniquely satisfying experience.', 'Wheat flour, palm oil, potato starch, sugar, soy sauce (water, soybeans, wheat, salt), chicken powder, salt, cheese powder, milk powder, red pepper powder, garlic powder, onion powder, modified starch, flavor enhancers (monosodium glutamate, disodium inosinate, disodium guanylate), soybean oil, skim milk, dried egg, spices, emulsifiers, acidity regulators, color (caramel color), artificial flavors.', 'pantry_buldak_carbonara_thumb.jpg', 'pantry_buldak_carbonara_1.jpg,pantry_buldak_carbonara_2.jpg', '2026-04-03 13:59:46', '2026-04-03 13:59:46'),
+(5, 'SPAM Classic Canned Meats 12 oz', 'SPAM', 1.20, 'pantry', '2026-05-18', 15, 'Good condition, can has a slight bend in the aluminum, but product inside is safe, sealed, and unaffected.', 'Enjoy the iconic taste of SPAM Classic, a versatile and convenient canned meat made from premium pork with a hint of salt and seasoning. Perfect for quick meals, sandwiches, breakfast, or adding a savory touch to your favorite recipes. Fully cooked and ready to eat, it delivers rich, savory flavor in every slice.', 'Pork, Salt, Water, Modified Potato Starch, Sugar, Sodium Nitrite.', 'pantry_spam_classic_thumb.jpg', 'pantry_spam_classic_1.jpg,pantry_spam_classic_2.jpg', '2026-04-03 14:05:19', '2026-04-03 14:05:19'),
+(6, 'Kellogg\'s Froot Loops Breakfast Cereal 8.9 oz', 'Kellogg', 1.50, 'pantry', '2026-05-26', 10, 'Box is mildly bent, product inside unaffected.', 'Start your day with a burst of colorful, fruity-flavored loops in every bowl. This 8.9oz box of Kellogg\'s Froot Loops delivers a crunchy texture and sweet, fruity taste that kids and adults love alike. Perfect with milk or as a fun snack straight from the box, it’s a classic breakfast favorite full of flavor and fun.', 'Whole grain corn flour, sugar, wheat flour, cornstarch, oat flour, modified food starch, corn syrup, dextrose, contains 2% or less of: salt, wheat gluten, soluble corn fiber, natural and artificial flavors, color added (red 40, yellow 6, blue 1, yellow 5, red 3), trisodium phosphate, vitamin C (ascorbic acid), B vitamins (niacinamide, pyridoxine hydrochloride, riboflavin, thiamin hydrochloride), iron and zinc minerals.', 'pantry_kellog_froot_loops_thumb.jpg', 'pantry_kellog_froot_loops_1.jpg,pantry_kellog_froot_loops_2.jp', '2026-04-03 14:09:04', '2026-04-03 14:09:04'),
+(7, 'Great Value Milk Whole Vitamin D 64 fl oz', 'Great Value', 1.50, 'dairy', '2026-05-15', 8, 'Bottle has a slight bend in the aluminum, but product inside is safe, sealed, and unaffected.', 'Enjoy the creamy, rich taste of Great Value Whole Milk, fortified with Vitamin D for strong bones and overall health. This 64 fl oz carton is perfect for drinking, cooking, baking, or adding to your favorite cereals and beverages. Fresh, wholesome, and full of essential nutrients, it’s a versatile staple for any household.', 'Whole milk', 'dairy_great_value_milk_thumb.jpg', 'dairy_great_value_milk_1.jpg,dairy_great_value_milk_2.jpg', '2026-04-03 14:15:04', '2026-04-03 14:15:04'),
+(8, 'Yoo-Hoo Chocolate Drink, 6.5 fl oz', 'Yoo-Hoo', 1.20, 'dairy', '2026-05-16', 12, 'Box is mildly bent, product inside unaffected.', 'Delight in the smooth, chocolaty taste of Yoo-Hoo Chocolate Drink in convenient 6.5 fl oz bottles, perfect for on-the-go enjoyment. This 8-pack delivers a rich, creamy chocolate flavor with a fun, nostalgic twist, making it a favorite for kids and adults alike. Great for lunchboxes, snacks, or anytime you need a sweet chocolate boost.', 'Filtered water, high fructose corn syrup, cocoa (processed with alkali), whey, nonfat milk, soy protein isolate, salt, carrageenan, dipotassium phosphate, artificial flavor, vitamin C (ascorbic acid).', 'dairy_yoohoo_chocolate_milk_thumb.jpg', 'dairy_yoohoo_chocolate_milk_1.jpg,dairy_yoohoo_chocolate_milk_2.jpg', '2026-04-03 14:19:28', '2026-04-03 14:19:28'),
+(9, 'Great Value Original Dairy Whipped Topping 13 oz', 'Great Value', 1.10, 'dairy', '2026-05-17', 5, 'Can has a slight bend in the aluminum, but the product inside is safe, sealed, and unaffected.', 'Add a light, creamy touch to desserts with Great Value Original Dairy Whipped Topping. This 13oz can delivers rich, fluffy whipped cream perfect for topping pies, cakes, hot chocolate, or fresh fruit. Easy to dispense and ready to enjoy, it’s a convenient way to elevate any treat.', 'Heavy cream, water, sugar, light cream, corn syrup, contains 2% or less of: gelatin, mono- and diglycerides, sorbitan monostearate, natural and artificial flavors, carrageenan.', 'dairy_great_value_whipped_cream_thumb.jpg', 'dairy_great_value_whipped_cream_1.jpg,dairy_great_value_whipped_cream_2.jpg', '2026-04-03 14:23:01', '2026-04-03 14:23:01'),
+(10, 'Minute Maid Fruit Punch Juice Drink 59 fl oz', 'Minute Maid', 0.90, 'drink', '2026-05-19', 12, 'Box is mildly bent, product inside unaffected.', 'Enjoy the vibrant, refreshing taste of Minute Maid Fruit Punch in a large 59 fl oz bottle. This classic juice blend combines sweet and tangy fruit flavors for a deliciously fruity drink, perfect for parties, family gatherings, or everyday refreshment. Serve chilled for a naturally fruity and thirst-quenching experience.', 'Filtered water, high fructose corn syrup, fruit juice from concentrate (apple, orange, pineapple, grape, lemon), citric acid, natural flavors, ascorbic acid (vitamin C), red 40.', 'drink_minute_maid_fruit_punch_thumb.jpg', 'drink_minute_maid_fruit_punch_1.jpg,drink_minute_maid_fruit_punch_2.jpg', '2026-04-03 14:29:45', '2026-04-03 14:29:45'),
+(11, 'Crush Caffeine Free Peach Soda Pop 12 fl oz ', 'Crush', 5.60, 'drink', '2026-05-26', 20, 'Good condition, packaging intact, contents sealed and fresh, with a closer-than-usual expiry date.', 'Enjoy the sweet, fruity taste of Crush Peach Soda without the caffeine. This 12-pack of 12 fl oz cans delivers a refreshing, bubbly peach-flavored soda perfect for parties, lunches, or anytime you want a fruity, fizzy treat. Light, crisp, and fun, it’s a classic soda everyone can enjoy.', 'Carbonated water, high fructose corn syrup, natural flavors, citric acid, sodium benzoate (preservative), yellow 6, red 40.', 'drink_crush_peach_thumb.jpg', 'drink_crush_peach_1.jpg, drink_crush_peach_2.jpg', '2026-04-03 14:34:29', '2026-04-03 14:34:29'),
+(12, 'Snapple Apple Juice Drink 16 fl oz', 'Snapple', 2.30, 'drink', '2026-05-20', 7, 'Good condition, packaging intact, contents sealed and fresh, with a closer-than-usual expiry date.', 'Savor the crisp, refreshing taste of Snapple Apple Juice in convenient 16 fl oz bottles, perfect for on-the-go enjoyment. Made with real apple juice, this 6-pack delivers a naturally sweet and fruity drink that’s ideal for lunchboxes, snacks, or anytime you want a wholesome, flavorful refreshment.', 'Apple juice from concentrate, water, ascorbic acid (vitamin C).', 'drink_snapple_apple_thumb.jpg', 'drink_snapple_apple_1.jpg,drink_snapple_apple_2.jpg', '2026-04-03 14:39:15', '2026-04-03 14:39:15'),
+(13, 'Stouffer\'s Family Size Lasagna with Meat & Sauce Frozen Meal', 'Stouffer\'s', 4.30, 'frozen', '2026-05-26', 17, 'Good condition, packaging intact, contents sealed and fresh, with a closer-than-usual expiry date.', 'Enjoy the classic taste of Stouffer\'s Lasagna with Meat & Sauce in a convenient family-size frozen meal. Layers of tender pasta, savory meat, rich tomato sauce, and melted cheeses come together for a hearty, satisfying meal perfect for gatherings or a comforting dinner.', 'Cooked pasta (enriched wheat flour, egg), meat (beef, pork), tomato puree, water, part-skim mozzarella cheese, ricotta cheese (milk, cream, salt, enzymes), cheddar cheese, modified food starch, sugar, salt, spices, onion powder, garlic powder, soy protein concentrate, natural flavors, citric acid.', 'frozen_stouffers_lasagna_family_thumb.jpg', 'frozen_stouffers_lasagna_family_1.jpg,frozen_stouffers_lasagna_family_2.jpg', '2026-04-03 14:43:54', '2026-04-03 14:43:54'),
+(14, 'Marie Callender\'s Aged Cheddar Cheesy Chicken and Rice Bowl 12 o', 'Marie Callender\'s', 0.50, 'frozen', '2026-05-21', 15, 'Good condition, packaging intact, contents sealed and fresh, with a closer-than-usual expiry date.', 'Savor the creamy, cheesy comfort of Marie Callender’s Aged Cheddar Cheesy Chicken and Rice Bowl. Tender chicken and fluffy rice are combined in a rich cheddar cheese sauce, making this 12 oz frozen meal a perfect, satisfying option for lunch or dinner.', 'Cooked rice, chicken breast with rib meat, water, cheddar cheese (pasteurized milk, cheese culture, salt, enzymes), cream, modified corn starch, whey, contains 2% or less of: butter (cream, salt), salt, natural flavors, spices, onion powder, garlic powder, sodium phosphate, citric acid.', 'frozen_marie_Callenders_chicken_rice_thumb.jpg', 'frozen_marie_Callenders_chicken_rice_1.jpg,frozen_marie_Callenders_chicken_rice_2.jpg', '2026-04-03 14:46:53', '2026-04-03 14:46:53'),
+(15, 'Bibigo Frozen Mini Wontons Chicken & Vegetable Dumplings 24.0 oz', 'Bibigo', 2.20, 'frozen', '2026-05-31', 35, 'Good condition, packaging intact, contents sealed and fresh, with a closer-than-usual expiry date.', 'Enjoy the authentic taste of Bibigo Mini Wontons with a flavorful chicken and vegetable filling. These 24 oz frozen dumplings are perfect for quick meals or appetizers, with tender wrappers and a savory, well-seasoned center that’s easy to steam, boil, or pan-fry.', 'Enriched wheat flour (wheat flour, niacin, iron, thiamine mononitrate, riboflavin, folic acid), water, chicken, cabbage, carrots, onions, soy sauce (water, soybeans, wheat, salt), garlic, sugar, sesame oil, salt, spices, modified starch, yeast extract, natural flavors.', 'frozen_bibigo_mini_wontons_thumb.jpg', 'frozen_bibigo_mini_wontons_1.jpg,frozen_bibigo_mini_wontons_2.jpg', '2026-04-03 14:50:42', '2026-04-03 14:50:42'),
+(16, 'Kraft Mac and Cheese 7.25 oz', 'Kraft', 0.50, 'pantry', '2026-05-31', 40, 'Box is mildly bent, product inside unaffected.', 'Enjoy a classic comfort meal with Kraft Mac and Cheese. This 7.25 oz box features tender pasta and creamy cheese sauce mix for an easy dinner or side dish, made without artificial flavors, preservatives, or dyes.', 'Enriched macaroni product (semolina, durum wheat flour, niacin, ferrous sulfate, thiamine mononitrate, riboflavin, folic acid), cheese sauce mix (whey, milkfat, milk protein concentrate, salt, calcium phosphate, sodium tripolyphosphate, citric acid, lactic acid, annatto extract for color).', 'pantry_kraft_mac_cheese_thumb.jpg', 'pantry_kraft_mac_cheese_1.jpg,pantry_kraft_mac_cheese_2.jpg', '2026-04-03 14:58:41', '2026-04-03 14:58:41'),
+(17, 'Quaker Oats Quick Cook Oatmeal 42 oz', 'Quaker', 1.40, 'pantry', '2026-05-27', 23, 'Good condition, packaging intact, contents sealed and fresh, with a closer-than-usual expiry date.', 'Make breakfast quick and easy with Quaker Quick 1-Minute Oats. This 42 oz canister contains whole grain oats that cook in just one minute, perfect for oatmeal, baking, or adding to recipes.', 'Whole grain oats.', 'pantry_quaker_oats_thumb.jpg', 'pantry_quaker_oats_1.jpg,pantry_quaker_oats_2.jpg', '2026-04-03 15:02:04', '2026-04-03 15:02:04'),
+(18, 'Quaker Quick 1-Minute Oats Gluten Free 18 oz', 'Quaker', 1.50, 'pantry', '2026-05-20', 15, 'Good condition, packaging intact, contents sealed and fresh, with a closer-than-usual expiry date.', 'Enjoy fast, gluten-free oatmeal with Quaker Quick 1-Minute Oats, Gluten Free. This 18 oz canister offers certified gluten-free whole grain oats that cook quickly for a wholesome breakfast or snack.', 'Whole grain gluten-free oats.', 'pantry_quaker_oats_gluten_free_thumb.jpg', 'pantry_quaker_oats_gluten_free_1.jpg,pantry_quaker_oats_gluten_free_2.jpg', '2026-04-03 15:06:09', '2026-04-03 15:06:09'),
+(19, 'Bob\'s Red Mill Gluten Free Non-GMO Old Fashioned Rolled Oats 32 ', 'Bob\'s Red Mill', 2.50, 'pantry', '2026-06-01', 12, 'Good condition, packaging intact, contents sealed and fresh, with a closer-than-usual expiry date.', 'Start your day with Bob’s Red Mill Gluten-Free Old Fashioned Rolled Oats. This 32 oz bag contains whole grain, non-GMO oats that are shelf-stable, ready-to-cook, and ideal for oatmeal, baking, or granola.', 'Gluten-free whole grain oats.', 'pantry_bobs_red_mill_gluten_free_oats_thumb.jpg', 'pantry_bobs_red_mill_gluten_free_oats_1.jpg,pantry_bobs_red_mill_gluten_free_oats_2.jpg', '2026-04-03 15:16:36', '2026-04-03 15:16:36'),
+(20, 'Goldfish Cheddar Cheese Crackers 27.3 oz', 'Goldfish', 2.00, 'snack', '2026-05-16', 28, 'Good condition, packaging intact, contents sealed and fresh, with a closer-than-usual expiry date.', 'Snack on the classic cheesy crunch of Goldfish Cheddar Crackers. This 27.3 oz carton features bite-sized, baked crackers with real cheddar flavor, perfect for lunchboxes, parties, or on-the-go snacking.', 'Enriched wheat flour (wheat flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), cheddar cheese (milk, cheese cultures, salt, enzymes), vegetable oils (canola, sunflower, and/or soybean oil), salt, yeast, paprika extract for color, spices, autolyzed yeast extract, sugar.', 'snack_goldfish_cheese_thumb.jpg', 'snack_goldfish_cheese_1.jpg,snack_goldfish_cheese_2.jpg', '2026-04-03 15:19:03', '2026-04-03 15:19:03'),
+(21, 'Betty Crocker Chocolate Chip Cookies Cookie Baking Mix 17.5 oz', 'Betty Crocker', 0.90, 'pantry', '2026-05-14', 15, 'Good condition, packaging intact, contents sealed and fresh, with a closer-than-usual expiry date.', 'Bake delicious chocolate chip cookies with Betty Crocker Cookie Baking Mix. This 17.5 oz mix makes it easy to create soft, chewy cookies packed with chocolate chips in minutes.', 'Sugar, enriched flour (wheat flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), semi-sweet chocolate chips (sugar, chocolate, cocoa butter, soy lecithin, vanilla), palm oil, leavening (baking soda, sodium aluminum phosphate), salt, natural flavor.', 'pantry_betty_croker_cookie_baking_thumb.jpg', 'pantry_betty_croker_cookie_baking_1.jpg,pantry_betty_croker_cookie_baking_2.jpg', '2026-04-03 15:21:47', '2026-04-03 15:21:47');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

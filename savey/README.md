@@ -1,4 +1,4 @@
-irene kadir_assignment 7.1_main site document
+irene kadir_assignment 9.1_create a products table
 
 Relevant Links
 http://irene-kadir.com/aau/wnm608/savey/
