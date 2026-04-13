@@ -42,9 +42,6 @@ body{
 
 
 
-
-
-
 /* STYLEGUIDE HTML */
 .styleguide-divider{
 	border: 1px solid #DDD1CA;
@@ -164,6 +161,51 @@ body{
 	border-radius: 0.5em;
 	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 	overflow: hidden;
+	transition: all 0.3s;
+}
+
+.product.figure img{
+	height: 100%;
+	object-fit: contain;
+}
+
+.productlist a{
+	text-decoration: none;
+	font-weight: initial;
+}
+
+.product.figure:hover {
+	box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+
+
+/* SECTION: PRODUCT ITEM */
+.images-main img{
+	width: 100%;
+	height: 50vh;
+	object-fit: contain;
+}
+
+.images-thumbs img{
+	width: 10em;
+	height: 8em;
+	object-fit: contain;
+}
+
+.images-thumbs {
+	display: flex;
+	justify-content: center;
+	gap: 0.5em;
+}
+
+.cart-item {
+	margin-bottom: 2rem;
+}
+
+.cart-item {
+	margin-bottom: 1rem;
+	align-items: center;
+	gap: 1rem;
 }
 
 

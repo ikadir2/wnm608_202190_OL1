@@ -68,6 +68,8 @@ a:hover{
 .flex-align-center{ align-items: center; }
 .flex-justify-center{ justify-content: center; }
 
+.flext-column { flex-direction: column; }
+
 
 
 
@@ -97,14 +99,12 @@ a:hover{
 	}
 
 	.nav a:hover{
-		background-color: #FFC74A;
-		color: var(--color-black);
+		color: #9FFAE3;
 		text-decoration: none;
 	}
 
 	.nav .active a{
-		background-color: var(--color-main-medium);
-		color: var(--color-white);
+		color: #FFC800;
 	}
 
 
@@ -167,6 +167,26 @@ a:hover{
 		box-shadow: 0 0 10px rgba(0,0,0,0.1);
 	}
 
+.card-section~.card-section{
+	border-top: 1px solid var(--color-neutral-light);
+}
+
+.card-section{
+	padding: 5em;
+}
+
+.card.soft.flat {
+	display: flex;
+	flex-direction: column;
+	gap: 0.7rem;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.card.soft.flat .card-section {
+	margin: 0;
+	padding: 0.5rem 0;
+}
 
 
 
@@ -276,7 +296,7 @@ figcaption{
 
 /* FORMS */
 .form-control{
-	margin: 1em 0;
+	margin: 0.5em 0;
 }
 
 .form-select>select,

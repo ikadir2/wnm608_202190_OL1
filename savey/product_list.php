@@ -11,124 +11,29 @@
 	<!-- NAVBAR -->
 	<?php include "parts/navbar.php"; ?>
 
-	<!-- TEMPORARY CONTENT -->
+	<!-- CONTENT -->
 	<div class="header">
 		<div class="container" id="header">
-			<h2>Today's Deals</h2>
-			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, nesciunt aliquam quis error sapiente optio doloremque consequuntur laboriosam eius officiis vero sit quasi harum consectetur perspiciatis rem! Et suscipit, assumenda animi, optio officia, quasi magni voluptatum doloribus autem ipsam.</p>
+			<h2>All Products</h2>
 
-			<br>
+			<?php
 
-			<div class="grid gap">
-				<div class="col-xs-12 col-md-3">
-					<a href="product_item.php?id=1">
-						<figure class="figure product">
-							<img src="https://placehold.co/400x400" alt="">
-							<figcaption>
-								<div>$3.99</div>
-								<div>Product Name</div>
-							<div class="tagmedium card">Best By 3/28</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
+			include_once "lib/php/functions.php";
+			include_once "parts/templates.php";
 
-				<div class="col-xs-12 col-md-3">
-					<a href="product_item.php?id=2">
-						<figure class="figure product">
-							<img src="https://placehold.co/400x400" alt="">
-							<figcaption>
-								<div>$3.99</div>
-								<div>Product Name</div>
-							<div class="tagmedium card">Best By 3/28</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
+			$result = makeQuery(
+				makeConn(), 
+				"
+				SELECT *
+				FROM `products`
+				ORDER BY `price` ASC
+				LIMIT 20
+				"
+			);
 
-				<div class="col-xs-12 col-md-3">
-					<a href="product_item.php?id=3">
-						<figure class="figure product">
-							<img src="https://placehold.co/400x400" alt="">
-							<figcaption>
-								<div>$3.99</div>
-								<div>Product Name</div>
-							<div class="tagmedium card">Best By 3/28</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
+			echo "<div class='productlist grid gap'>", array_reduce($result, 'productlistTemplate'), "</div>";
 
-				<div class="col-xs-12 col-md-3">
-					<a href="product_item.php?id=4">
-						<figure class="figure product">
-							<img src="https://placehold.co/400x400" alt="">
-							<figcaption>
-								<div>$3.99</div>
-								<div>Product Name</div>
-							<div class="tagmedium card">Best By 3/28</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-			</div>
-
-			<br>
-			<br>
-			
-			<div class="grid gap">
-				<div class="col-xs-12 col-md-3">
-					<a href="product_item.php?id=5">
-						<figure class="figure product">
-							<img src="https://placehold.co/400x400" alt="">
-							<figcaption>
-								<div>$3.99</div>
-								<div>Product Name</div>
-							<div class="tagmedium card">Best By 3/28</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-
-				<div class="col-xs-12 col-md-3">
-					<a href="product_item.php?id=6">
-						<figure class="figure product">
-							<img src="https://placehold.co/400x400" alt="">
-							<figcaption>
-								<div>$3.99</div>
-								<div>Product Name</div>
-							<div class="tagmedium card">Best By 3/28</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-
-				<div class="col-xs-12 col-md-3">
-					<a href="product_item.php?id=7">
-						<figure class="figure product">
-							<img src="https://placehold.co/400x400" alt="">
-							<figcaption>
-								<div>$3.99</div>
-								<div>Product Name</div>
-							<div class="tagmedium card">Best By 3/28</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-
-				<div class="col-xs-12 col-md-3">
-					<a href="product_item.php?id=8">
-						<figure class="figure product">
-							<img src="https://placehold.co/400x400" alt="">
-							<figcaption>
-								<div>$3.99</div>
-								<div>Product Name</div>
-							<div class="tagmedium card">Best By 3/28</div>
-							</figcaption>
-						</figure>
-					</a>
-				</div>
-			</div>
+			?>
 		</div>
 	</div>
 

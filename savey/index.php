@@ -11,7 +11,7 @@
 	<!-- NAVBAR -->
 	<?php include "parts/navbar.php"; ?>
 
-	<!-- TEMPORARY CONTENT -->
+	<!-- CONTENT -->
 	<div class="header">
 		<div class="container" id="header">
 			<h2>Save food, save money!</h2>

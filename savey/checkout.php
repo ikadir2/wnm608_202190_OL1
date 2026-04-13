@@ -9,12 +9,17 @@
 </head>
 <body>
 
+	<!-- NAVBAR -->
 	<?php include "parts/navbar.php"; ?>
 
 	<br>
+
+	<!-- CONTENT -->
 	<div class="container">
 		<div class="card soft">
 			<h2>Checkout</h2>
+
+			<h4 style="font-weight: 500; color: #008374">Delivery Address</h4>
 
 			<form>
 				<div class="form-control">
@@ -59,10 +64,21 @@
 				</div>
 			</div>
 
+			<br>
+
+			<h4 style="font-weight: 500; color: #008374">Payment</h4>
+
 			<form>
 				<div class="form-control">
 					<label class="form-label">Card number</label>
 					<input type="text" placeholder="1234 5678 9101 2345" class="form-input">
+				</div>
+			</form>
+
+			<form>
+				<div class="form-control">
+					<label class="form-label">Name</label>
+					<input type="text" placeholder="Enter your name" class="form-input">
 				</div>
 			</form>
 
@@ -79,12 +95,51 @@
 				<div class="col-xs-12 col-md-6">
 					<form>
 						<div class="form-control">
-							<label class="form-label">CCV</label>
-							<input type="text" placeholder="Enter your ccv number" class="expire-card form-input">
+							<label class="form-label">CVV</label>
+							<input type="text" placeholder="Enter your cvv number" class="expire-card form-input">
 						</div>
 					</form>
 				</div>
 			</div>
+
+			<form>
+				<div class="form-control">
+					<label class="form-label">Billing Address</label>
+					<input type="text" placeholder="Enter your street address" class="form-input">
+				</div>
+			</form>
+
+			<div class="grid gap">
+				<div class="col-xs-12 col-md-4">
+					<form>
+						<div class="form-control">
+							<label class="form-label">City</label>
+							<input type="text" placeholder="Enter your city" class="form-input">
+						</div>
+					</form>
+				</div>
+
+				<div class="col-xs-12 col-md-4">
+					<form>
+						<div class="form-control">
+							<label class="form-label">Zip code</label>
+							<input type="text" placeholder="Enter your zip code" class="form-input">
+						</div>
+					</form>
+				</div>
+
+				<div class="col-xs-12 col-md-4">
+					<form>
+						<div class="form-control">
+							<label class="form-label">Country</label>
+							<input type="text" placeholder="Enter your street country" class="form-input">
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<br>
+			<br>
 
 			<div class="col-xs-12 col-md-6">
 				<div class="form-control">
@@ -96,7 +151,8 @@
 		</div>
 	</div>
 
-	
+	<br>
+	<br>
 
 	<!-- FOOTER -->
 	<?php include "parts/footer.php"; ?>

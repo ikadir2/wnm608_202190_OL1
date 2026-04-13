@@ -9,10 +9,11 @@
 		<div class="flex-stretch"></div>
 		<nav class="flex-none nav">
 			<ul class="container display-flex">
-				<li style="padding: 0 1em"><a href="product_list.php">Shop</a></li>
-				<li style="padding: 0 1em"><a href="cart.php">Cart</a></li>
-				<li style="padding: 0 1em"><a href="about.php">About</a></li>
-				<li style="padding: 0 1em"><a href="help.php">Help</a></li>
+				<?php $page = basename($_SERVER['PHP_SELF']); ?>
+				<li class="<?= $page=='product_list.php' ? 'active' : '' ?>" style="padding: 0 1em"><a href="product_list.php">Shop</a></li>
+				<li class="<?= $page=='cart.php' ? 'active' : '' ?>" style="padding: 0 1em"><a href="cart.php">Cart</a></li>
+				<li class="<?= $page=='about.php' ? 'active' : '' ?>" style="padding: 0 1em"><a href="about.php">About</a></li>
+				<li class="<?= $page=='help.php' ? 'active' : '' ?>" style="padding: 0 1em"><a href="help.php">Help</a></li>
 			</ul>
 		</nav>
 	</div>
