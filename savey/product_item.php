@@ -10,7 +10,7 @@ $image_elements = array_reduce($images,function($r,$o){
 	return $r."<img src='img/$o'>";
 });
 
-// print_p($product);
+//print_p($_SESSION);
 
 ?>
 
@@ -26,7 +26,7 @@ $image_elements = array_reduce($images,function($r,$o){
 	<!-- JAVASCRIPT -->
 	<script src="js/product_thumbs.js"></script>
 </head>
-<body>
+<body class="page-cart">
 
 	<!-- NAVBAR -->
 	<?php include "parts/navbar.php"; ?>
@@ -35,62 +35,68 @@ $image_elements = array_reduce($images,function($r,$o){
 	<br>
 
 	<!-- CONTENT -->
-	<div class="container">
-		<div class="grid gap align-items-stretch">
-			<div class="col-xs-12 col-md-6">
-				<div class="card soft" style="height: 100%; align-content: center;">
-					<div class="images-main">
-						<img src="img/<?= $product->thumbnail ?>">
-					</div>
-					<br>
-					<div class="images-thumbs">
-						<?= $image_elements ?>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-xs-12 col-md-6">
-				<div class="card soft flat" style="height: 100%; align-content: center;">
-					<div>
-						<h2 class="product-name"><?= $product->name ?></h2>
-						<div style ="font-weight: 600; font-size: 20pt; color: #FF7506" class="product-price">&dollar;<?= $product->price ?></div>
+	<div class="page-cart-content">
+		<div class="container" style="margin-bottom: 70px;">
+			<div class="grid gap align-items">
+				<div class="col-xs-12 col-md-6">
+					<div class="card soft" style="height: 100%; align-content: center; padding-bottom: 10px;">
+						<div class="images-main" style="margin:0">
+							<img src="img/<?= $product->thumbnail ?>">
+						</div>
 
 						<br>
 
-						<p style="color: #7B8684"><?= $product->product_condition ?></p>
-						<p style="color: #7B8684"><?= $product->description ?></p>
-
-						<p style="color: #D0B7A9; font-size: 10pt"><?= $product->ingredients ?></p>
-					</div>
-
-					<br>
-
-					<div>
-						<label for="product-amount" class="form-label"></label>
-						<div class="form-select" id="product-amount">
-							<select>
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
+						<div class="images-thumbs">
+							<?= $image_elements ?>
 						</div>
 					</div>
+				</div>
 
-					<div class="card-section form-control">
-						<a href="cart.php?id=<?= $product->id ?>">
-							<button type="button" class="button-dark form-button">Add to cart</button>
-						</a>
-					</div>
-				</div>					
+				<div class="col-xs-12 col-md-6">
+					<div class="checkout-card">	
+						<form class="card soft flat product-card" method="post" action="cart_actions.php?action=add-to-cart" style="height: 100%; align-content: center; padding-bottom: 10px; padding-left: 30px; padding-right: 30px" >
+
+							<input type="hidden" name="product-id" value="<?= $product->id ?>">
+
+							<div>
+								<h2 class="product-name" style="margin-top: 10px;"><?= $product->name ?></h2>
+								<div style ="font-weight: 600; font-size: 20pt; color: #FF7506; padding-bottom: 10px" class="product-price">&dollar;<?= $product->price ?></div>
+
+								<p class="display-flex" style="color: #7B8684; padding-bottom: 10px;"><?= $product->product_condition ?> Expiry date of this product: <?= $product->expiry_date ?>.</p>
+								<p class="display-flex" style="color: #7B8684; padding-bottom: 20px;"><?= $product->description ?></p>
+
+								<p style="color: #D0B7A9; font-size: 10pt; padding-bottom: 50px"><?= $product->ingredients ?></p>
+							</div>
+
+							<br>
+
+							<div>
+								<label for="product-amount" class="form-label"></label>
+								<div class="form-select">
+									<select id="product-amount" name="product-amount">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="card-section form-control checkout-button">
+								<input type="submit" class="button-dark form-button" value="Add To Cart" style="font-weight: 700">
+							</div>
+						</form>
+					</div>					
+				</div>
 			</div>
 		</div>
 	</div>
-
-	<br>
-	<br>
-	<br>
 
 
 	<!-- FOOTER -->

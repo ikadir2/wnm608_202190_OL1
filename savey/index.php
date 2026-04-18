@@ -1,3 +1,10 @@
+<?php
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,6 +88,13 @@
 			<p>Quisquam beatae eius esse? Doloribus commodi sapiente inventore voluptatum odio ipsam pariatur illum enim nihil beatae quod sed vitae, autem quae, dolore cum ab aliquid. Quos veniam cum nesciunt incidunt corporis tempore possimus modi illum, esse, numquam nihil exercitationem, temporibus.</p>
 		</div>
 	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
 	<!-- FOOTER -->
 	<?php include "parts/footer.php"; ?>

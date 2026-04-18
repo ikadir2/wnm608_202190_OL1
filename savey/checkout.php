@@ -1,3 +1,10 @@
+<?php
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +14,7 @@
 	<!-- META-->
 	<?php include "parts/meta.php"; ?>
 </head>
-<body>
+<body class="page-cart">
 
 	<!-- NAVBAR -->
 	<?php include "parts/navbar.php"; ?>
@@ -15,144 +22,153 @@
 	<br>
 
 	<!-- CONTENT -->
-	<div class="container">
-		<div class="card soft">
-			<h2>Checkout</h2>
+	<div class="page-cart-content">
+		<div class="container align-items" style="padding-top: 25px; margin-bottom: 40px;">
+			<div class="grid gap align-items">
+				<div class="col-xs-12 col-md-8">
+					<div class="card soft" style="height: 100%; align-content: center;">
+						<div class="checkout-content"> 
+							<h2 style="margin-top: 10px">Checkout</h2>
 
-			<h4 style="font-weight: 500; color: #008374">Delivery Address</h4>
+							<h4 style="font-weight: 500; color: #008374">Delivery Address</h4>
 
-			<form>
-				<div class="form-control">
-					<label class="form-label">Name</label>
-					<input type="text" placeholder="Enter your name" class="form-input">
-				</div>
-			</form>
+							<form>
+								<div class="form-control">
+									<label class="form-label">Name</label>
+									<input type="text" placeholder="Enter your name" class="form-input">
+								</div>
+							</form>
 
-			<form>
-				<div class="form-control">
-					<label class="form-label">Address</label>
-					<input type="text" placeholder="Enter your street address" class="form-input">
-				</div>
-			</form>
+							<form>
+								<div class="form-control">
+									<label class="form-label">Address</label>
+									<input type="text" placeholder="Enter your street address" class="form-input">
+								</div>
+							</form>
 
-			<div class="grid gap">
-				<div class="col-xs-12 col-md-4">
-					<form>
-						<div class="form-control">
-							<label class="form-label">City</label>
-							<input type="text" placeholder="Enter your city" class="form-input">
+							<div class="grid gap">
+								<div class="col-xs-12 col-md-4">
+									<form>
+										<div class="form-control">
+											<label class="form-label">City</label>
+											<input type="text" placeholder="Enter your city" class="form-input">
+										</div>
+									</form>
+								</div>
+
+								<div class="col-xs-12 col-md-4">
+									<form>
+										<div class="form-control">
+											<label class="form-label">Zip code</label>
+											<input type="text" placeholder="Enter your zip code" class="form-input">
+										</div>
+									</form>
+								</div>
+
+								<div class="col-xs-12 col-md-4">
+									<form>
+										<div class="form-control">
+											<label class="form-label">Country</label>
+											<input type="text" placeholder="Enter your street country" class="form-input">
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<br>
+
+							<h4 style="font-weight: 500; color: #008374">Payment</h4>
+
+							<form>
+								<div class="form-control">
+									<label class="form-label">Card number</label>
+									<input type="text" placeholder="1234 5678 9101 2345" class="form-input">
+								</div>
+							</form>
+
+							<form>
+								<div class="form-control">
+									<label class="form-label">Name</label>
+									<input type="text" placeholder="Enter your name" class="form-input">
+								</div>
+							</form>
+
+							<div class="grid gap">
+								<div class="col-xs-12 col-md-6">
+									<form>
+										<div class="form-control">
+											<label class="form-label">Expiration date</label>
+											<input type="date" placeholder="date" class="form-input">
+										</div>
+									</form>
+								</div>
+
+								<div class="col-xs-12 col-md-6">
+									<form>
+										<div class="form-control">
+											<label class="form-label">CVV</label>
+											<input type="text" placeholder="Enter your cvv number" class="expire-card form-input">
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<form>
+								<div class="form-control">
+									<label class="form-label">Billing Address</label>
+									<input type="text" placeholder="Enter your street address" class="form-input">
+								</div>
+							</form>
+
+							<div class="grid gap">
+								<div class="col-xs-12 col-md-4">
+									<form>
+										<div class="form-control">
+											<label class="form-label">City</label>
+											<input type="text" placeholder="Enter your city" class="form-input">
+										</div>
+									</form>
+								</div>
+
+								<div class="col-xs-12 col-md-4">
+									<form>
+										<div class="form-control">
+											<label class="form-label">Zip code</label>
+											<input type="text" placeholder="Enter your zip code" class="form-input">
+										</div>
+									</form>
+								</div>
+
+								<div class="col-xs-12 col-md-4">
+									<form>
+										<div class="form-control">
+											<label class="form-label">Country</label>
+											<input type="text" placeholder="Enter your street country" class="form-input">
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-md-6">
+								<div class="form-control" style="padding-top: 50px; margin-bottom: 0">
+									<a href="confirmation.php">
+										<button type="button" class="button-dark form-button">Place order</button>
+									</a>
+								</div>
+							</div>
 						</div>
-					</form>
+					</div>
 				</div>
 
-				<div class="col-xs-12 col-md-4">
-					<form>
-						<div class="form-control">
-							<label class="form-label">Zip code</label>
-							<input type="text" placeholder="Enter your zip code" class="form-input">
-						</div>
-					</form>
-				</div>
-
-				<div class="col-xs-12 col-md-4">
-					<form>
-						<div class="form-control">
-							<label class="form-label">Country</label>
-							<input type="text" placeholder="Enter your street country" class="form-input">
-						</div>
-					</form>
-				</div>
-			</div>
-
-			<br>
-
-			<h4 style="font-weight: 500; color: #008374">Payment</h4>
-
-			<form>
-				<div class="form-control">
-					<label class="form-label">Card number</label>
-					<input type="text" placeholder="1234 5678 9101 2345" class="form-input">
-				</div>
-			</form>
-
-			<form>
-				<div class="form-control">
-					<label class="form-label">Name</label>
-					<input type="text" placeholder="Enter your name" class="form-input">
-				</div>
-			</form>
-
-			<div class="grid gap">
-				<div class="col-xs-12 col-md-6">
-					<form>
-						<div class="form-control">
-							<label class="form-label">Expiration date</label>
-							<input type="date" placeholder="date" class="form-input">
-						</div>
-					</form>
-				</div>
-
-				<div class="col-xs-12 col-md-6">
-					<form>
-						<div class="form-control">
-							<label class="form-label">CVV</label>
-							<input type="text" placeholder="Enter your cvv number" class="expire-card form-input">
-						</div>
-					</form>
-				</div>
-			</div>
-
-			<form>
-				<div class="form-control">
-					<label class="form-label">Billing Address</label>
-					<input type="text" placeholder="Enter your street address" class="form-input">
-				</div>
-			</form>
-
-			<div class="grid gap">
-				<div class="col-xs-12 col-md-4">
-					<form>
-						<div class="form-control">
-							<label class="form-label">City</label>
-							<input type="text" placeholder="Enter your city" class="form-input">
-						</div>
-					</form>
-				</div>
-
-				<div class="col-xs-12 col-md-4">
-					<form>
-						<div class="form-control">
-							<label class="form-label">Zip code</label>
-							<input type="text" placeholder="Enter your zip code" class="form-input">
-						</div>
-					</form>
-				</div>
-
-				<div class="col-xs-12 col-md-4">
-					<form>
-						<div class="form-control">
-							<label class="form-label">Country</label>
-							<input type="text" placeholder="Enter your street country" class="form-input">
-						</div>
-					</form>
-				</div>
-			</div>
-
-			<br>
-			<br>
-
-			<div class="col-xs-12 col-md-6">
-				<div class="form-control">
-					<a href="confirmation.php">
-						<button type="button" class="button-dark form-button">Place order</button>
-					</a>
+				<div class="col-xs-12 col-md-4" style="color: #6D7473;">
+				    <div class="card soft flat">
+				        <?= cartTotals(false) ?>
+				    </div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<br>
-	<br>
 
 	<!-- FOOTER -->
 	<?php include "parts/footer.php"; ?>

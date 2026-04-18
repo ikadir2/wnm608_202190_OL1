@@ -1,3 +1,10 @@
+<?php
+
+	include_once "lib/php/functions.php";
+	include_once "parts/templates.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,37 +14,35 @@
 	<!-- META-->
 	<?php include "parts/meta.php"; ?>
 </head>
-<body>
+<body class="page-cart">
 	<!-- NAVBAR -->
 	<?php include "parts/navbar.php"; ?>
 
 	<!-- CONTENT -->
-	<div class="header">
-		<div class="container" id="header">
-			<h2>All Products</h2>
+	<div class="page-cart-content">
+		<div class="header">
+			<div class="container align-items" id="header">
+				<h2>All Products</h2>
 
-			<?php
+				<?php
 
-			include_once "lib/php/functions.php";
-			include_once "parts/templates.php";
+				$result = makeQuery(
+					makeConn(), 
+					"
+					SELECT *
+					FROM `products`
+					ORDER BY `price` ASC
+					LIMIT 20
+					"
+				);
 
-			$result = makeQuery(
-				makeConn(), 
-				"
-				SELECT *
-				FROM `products`
-				ORDER BY `price` ASC
-				LIMIT 20
-				"
-			);
+				echo "<div class='productlist grid gap'>", array_reduce($result, 'productlistTemplate'), "</div>";
 
-			echo "<div class='productlist grid gap'>", array_reduce($result, 'productlistTemplate'), "</div>";
-
-			?>
+				?>
+			</div>
 		</div>
 	</div>
 
-	<br>
 	<br>
 
 	<!-- FOOTER -->
