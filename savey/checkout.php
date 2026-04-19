@@ -3,6 +3,8 @@
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
+$cart_items = getCartItems();
+
 ?>
 
 <!DOCTYPE html>
@@ -24,9 +26,9 @@ include_once "parts/templates.php";
 	<!-- CONTENT -->
 	<div class="page-cart-content">
 		<div class="container align-items" style="padding-top: 25px; margin-bottom: 40px;">
-			<div class="grid gap align-items">
-				<div class="col-xs-12 col-md-8">
-					<div class="card soft" style="height: 100%; align-content: center;">
+			<div class="grid gap">
+				<div class="col-xs-12 col-md-7">
+					<div class="card soft">
 						<div class="checkout-content"> 
 							<h2 style="margin-top: 10px">Checkout</h2>
 
@@ -35,14 +37,14 @@ include_once "parts/templates.php";
 							<form>
 								<div class="form-control">
 									<label class="form-label">Name</label>
-									<input type="text" placeholder="Enter your name" class="form-input">
+									<input type="text" placeholder="Enter your name" class="form-input" style="font-size: 15px;">
 								</div>
 							</form>
 
 							<form>
 								<div class="form-control">
 									<label class="form-label">Address</label>
-									<input type="text" placeholder="Enter your street address" class="form-input">
+									<input type="text" placeholder="Enter your street address" class="form-input" style="font-size: 15px;">
 								</div>
 							</form>
 
@@ -51,7 +53,7 @@ include_once "parts/templates.php";
 									<form>
 										<div class="form-control">
 											<label class="form-label">City</label>
-											<input type="text" placeholder="Enter your city" class="form-input">
+											<input type="text" placeholder="Enter your city" class="form-input" style="font-size: 15px;">
 										</div>
 									</form>
 								</div>
@@ -60,7 +62,7 @@ include_once "parts/templates.php";
 									<form>
 										<div class="form-control">
 											<label class="form-label">Zip code</label>
-											<input type="text" placeholder="Enter your zip code" class="form-input">
+											<input type="text" placeholder="Enter your zip code" class="form-input" style="font-size: 15px;">
 										</div>
 									</form>
 								</div>
@@ -69,11 +71,18 @@ include_once "parts/templates.php";
 									<form>
 										<div class="form-control">
 											<label class="form-label">Country</label>
-											<input type="text" placeholder="Enter your street country" class="form-input">
+											<input type="text" placeholder="Enter your country" class="form-input" style="font-size: 15px;">
 										</div>
 									</form>
 								</div>
 							</div>
+
+							<form>
+								<div class="form-control">
+									<label class="form-label">Email</label>
+									<input type="text" placeholder="Enter your email address" class="form-input" style="font-size: 15px;">
+								</div>
+							</form>
 
 							<br>
 
@@ -82,14 +91,14 @@ include_once "parts/templates.php";
 							<form>
 								<div class="form-control">
 									<label class="form-label">Card number</label>
-									<input type="text" placeholder="1234 5678 9101 2345" class="form-input">
+									<input type="text" placeholder="1234 5678 9101 2345" class="form-input" style="font-size: 15px;">
 								</div>
 							</form>
 
 							<form>
 								<div class="form-control">
 									<label class="form-label">Name</label>
-									<input type="text" placeholder="Enter your name" class="form-input">
+									<input type="text" placeholder="Enter your name" class="form-input" style="font-size: 15px;">
 								</div>
 							</form>
 
@@ -98,7 +107,7 @@ include_once "parts/templates.php";
 									<form>
 										<div class="form-control">
 											<label class="form-label">Expiration date</label>
-											<input type="date" placeholder="date" class="form-input">
+											<input type="date" placeholder="date" class="form-input" style="font-size: 15px;">
 										</div>
 									</form>
 								</div>
@@ -107,7 +116,7 @@ include_once "parts/templates.php";
 									<form>
 										<div class="form-control">
 											<label class="form-label">CVV</label>
-											<input type="text" placeholder="Enter your cvv number" class="expire-card form-input">
+											<input type="text" placeholder="Enter your cvv number" class="expire-card form-input" style="font-size: 15px;">
 										</div>
 									</form>
 								</div>
@@ -116,7 +125,7 @@ include_once "parts/templates.php";
 							<form>
 								<div class="form-control">
 									<label class="form-label">Billing Address</label>
-									<input type="text" placeholder="Enter your street address" class="form-input">
+									<input type="text" placeholder="Enter your street address" class="form-input" style="font-size: 15px;">
 								</div>
 							</form>
 
@@ -125,7 +134,7 @@ include_once "parts/templates.php";
 									<form>
 										<div class="form-control">
 											<label class="form-label">City</label>
-											<input type="text" placeholder="Enter your city" class="form-input">
+											<input type="text" placeholder="Enter your city" class="form-input" style="font-size: 15px;">
 										</div>
 									</form>
 								</div>
@@ -134,7 +143,7 @@ include_once "parts/templates.php";
 									<form>
 										<div class="form-control">
 											<label class="form-label">Zip code</label>
-											<input type="text" placeholder="Enter your zip code" class="form-input">
+											<input type="text" placeholder="Enter your zip code" class="form-input" style="font-size: 15px;">
 										</div>
 									</form>
 								</div>
@@ -143,7 +152,7 @@ include_once "parts/templates.php";
 									<form>
 										<div class="form-control">
 											<label class="form-label">Country</label>
-											<input type="text" placeholder="Enter your street country" class="form-input">
+											<input type="text" placeholder="Enter your country" class="form-input" style="font-size: 15px;">
 										</div>
 									</form>
 								</div>
@@ -160,7 +169,10 @@ include_once "parts/templates.php";
 					</div>
 				</div>
 
-				<div class="col-xs-12 col-md-4" style="color: #6D7473;">
+				<div class="col-xs-12 col-md-5" style="color: #6D7473;">
+				    <div class="card soft flat" style="margin-bottom: 16px;">
+				        <?= array_reduce($cart_items, 'cartlistTemplateReadOnly') ?>
+				    </div>
 				    <div class="card soft flat">
 				        <?= cartTotals(false) ?>
 				    </div>

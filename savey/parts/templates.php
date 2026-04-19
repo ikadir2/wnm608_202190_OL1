@@ -71,6 +71,25 @@ return $r.<<<HTML
 HTML;
 }
 
+function cartlistTemplateReadOnly($r,$o){
+$totalfixed = number_format($o->total,2,'.','');
+return $r.<<<HTML
+<div class="cart-page">
+	<div class="cart-item display-flex" style="margin-top: 20px; color: #6D7473; align-items: center;">
+		<div class="flex-none images-thumbs" style="display: flex; align-items: center;">
+			<img src="img/$o->thumbnail">
+		</div>
+		<div class="flex-stretch">			
+			<div class="display-flex" style="justify-content: space-between; align-items: baseline;">
+				<strong style="line-height: 1;">$o->name</strong>
+				<div style="padding-right: 15px;">&dollar;$totalfixed</div>
+			</div>
+			<div style="font-size: 0.8em; margin-top: 5px; padding-left: 2px;">Qty: $o->amount</div>
+		</div>
+	</div>
+</div>
+HTML;
+}
 
 function cartTotals($has_items = true) {
     $cart = getCartItems();
