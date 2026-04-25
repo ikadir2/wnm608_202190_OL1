@@ -170,11 +170,14 @@ $cart_items = getCartItems();
 				</div>
 
 				<div class="col-xs-12 col-md-5" style="color: #6D7473;">
+					<div class="card soft flat">
+				        <?= cartTotals(false) ?>
+				    </div>
+
+				    <br>
+
 				    <div class="card soft flat" style="margin-bottom: 16px;">
 				        <?= array_reduce($cart_items, 'cartlistTemplateReadOnly') ?>
-				    </div>
-				    <div class="card soft flat">
-				        <?= cartTotals(false) ?>
 				    </div>
 				</div>
 			</div>
