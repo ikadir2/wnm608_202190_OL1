@@ -142,7 +142,7 @@ function recommendedCategory($cat, $limit=4) {
     echo "<div class='productlist grid gap'>", array_reduce($result, 'productlistTemplate'), "</div>";
 }
 
-function recommendedSimilar($cat, $id=0, $limit=4) {
+function recommendedSimilar($cat, $id=0, $limit=3) {
     $result = makeQuery(
         makeConn(), 
         "
@@ -154,5 +154,5 @@ function recommendedSimilar($cat, $id=0, $limit=4) {
         LIMIT $limit
         "
     );
-    echo "<div class='productlist grid gap'>", array_reduce($result, 'productlistTemplate'), "</div>";
+    echo "<div style='display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em;' class='similar-grid'>", array_reduce($result, 'productlistTemplate'), "</div>";
 }
