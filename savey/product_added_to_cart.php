@@ -35,26 +35,7 @@ $cart_product = cartItemById($_GET['id']);
 
 					<div class="card flat" style="background-color: #FFF0E4; padding: 30px;">
 						<div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 30px">
-							<h5 style="font-weight: 600; color: #FF7506; margin: 0;">Trending Snacks</h5>
-
-							<div class="form-control">
-								<a href="product_list.php" style="text-decoration: none;">
-									<div style="
-										width: 32px;
-										height: 32px;
-										border: 1px solid #FF7506;
-										border-radius: 50%;
-										display: flex;
-										align-items: center;
-										justify-content: center;
-										color: #FF7506;
-										font-weight: bold;
-										cursor: pointer;
-									">
-										&gt;
-									</div>
-								</a>
-							</div>
+							<h5 style="font-weight: 600; color: #FF7506; margin: 0;">Trending snacks</h5>
 						</div>
 
 						<?php

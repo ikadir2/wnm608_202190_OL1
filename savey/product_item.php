@@ -94,7 +94,7 @@ $image_elements = array_reduce($images,function($r,$o){
 			<div class="card soft" style="padding:30px; margin-top: 30px;">
 				<div class="card flat" style="background-color: #FFF0E4; padding: 30px;">
 					<div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 30px">
-						<h5 style="font-weight: 600; color: #FF7506; margin: 0;">Recommended Products</h5>
+						<h5 style="font-weight: 600; color: #FF7506; margin: 0;">Recommended products</h5>
 					</div>
 			
 					<?php
