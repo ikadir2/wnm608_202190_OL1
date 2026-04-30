@@ -63,7 +63,7 @@
 			           	<div class="form-select filter-row">
 							<select class="js-sort" style="background-color: #FCFCFC; color: #FF7506; border: 1px solid; padding-top: 10px; padding-bottom: 10px; line-height: 1.2; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); padding-right: 3em;">
 								<option value="" disabled selected>Sort by</option>
-								<option value="0">Recommended</option>s
+								<option value="0">All Products</option>
 								<option value="1">Price High to Low</option>
 								<option value="2">Price Low to High</option>
 							</select>

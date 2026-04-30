@@ -1,5 +1,4 @@
 <?php
-
 function productlistTemplate($r,$o){
 return $r.<<<HTML
 <div class="col-xs-12 col-md-3">
@@ -120,4 +119,40 @@ function cartTotals($has_items = true) {
     </div>
     $checkoutbtn
 HTML;
+}
+
+function recommendedProducts($a) {
+$products = array_reduce($a,'productListTemplate');
+echo <<<HTML
+<div class="grid gap productlist">$products</div>
+HTML;
+}
+
+function recommendedCategory($cat, $limit=4) {
+    $result = makeQuery(
+        makeConn(), 
+        "
+        SELECT *
+        FROM `products`
+        WHERE `category`='$cat'
+        ORDER BY `date_create` DESC
+        LIMIT $limit
+        "
+    );
+    echo "<div class='productlist grid gap'>", array_reduce($result, 'productlistTemplate'), "</div>";
+}
+
+function recommendedSimilar($cat, $id=0, $limit=4) {
+    $result = makeQuery(
+        makeConn(), 
+        "
+        SELECT *
+        FROM `products`
+        WHERE `category`='$cat'
+        AND `id`<>$id
+        ORDER BY RAND ()
+        LIMIT $limit
+        "
+    );
+    echo "<div class='productlist grid gap'>", array_reduce($result, 'productlistTemplate'), "</div>";
 }

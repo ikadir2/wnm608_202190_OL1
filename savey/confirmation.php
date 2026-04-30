@@ -38,7 +38,7 @@ resetCart();
 
 					<div class="card flat" style="background-color: #FFF0E4; padding: 30px;">
 						<div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 30px">
-							<h5 style="font-weight: 600; color: #FF7506; margin: 0;">Discover More Items</h5>
+							<h5 style="font-weight: 600; color: #FF7506; margin: 0;">Trending Snacks</h5>
 
 							<div class="form-control">
 								<a href="product_list.php" style="text-decoration: none;">
@@ -65,19 +65,9 @@ resetCart();
 						include_once "lib/php/functions.php";
 						include_once "parts/templates.php";
 
-						$result = makeQuery(
-							makeConn(), 
-							"
-							SELECT *
-							FROM `products`
-							ORDER BY RAND()
-							LIMIT 4
-							"
-						);
+						recommendedCategory("Snack");
 
-					echo "<div class='productlist grid gap'>", array_reduce($result, 'productlistTemplate'), "</div>";
-
-					?>
+						?>
 					</div>
 				</div>
 			</div>

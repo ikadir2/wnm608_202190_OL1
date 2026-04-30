@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+define('BASE_URL', '/aau/wnm608/savey/');
 
 function print_p($v){
 	echo "<pre>", print_r($v),"</pre>";
@@ -12,6 +13,15 @@ function makeConn(){
 	$conn = new mysqli(...MYSQLIAuth());
 	if($conn->connect_errno) die($conn->connect_error);
 	$conn->set_charset('utf8');
+	return $conn;
+}
+
+function makePDOConn() {
+	try {
+		$conn = new PDO(...PDOAuth());
+	} catch(PDOException $e) {
+		die($e->getMessage());
+	}
 	return $conn;
 }
 

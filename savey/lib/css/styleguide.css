@@ -309,7 +309,28 @@ figcaption{
 	line-height: 2em;
 }
 
+.container.product-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+}
 
+.checkout-button {
+  margin-top: auto;
+  padding-bottom: 20px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-actions {
+  margin-top: auto;
+  padding-bottom: 20px;
+}
 
 
 
