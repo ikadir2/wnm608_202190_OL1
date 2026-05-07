@@ -29,7 +29,7 @@
 	    <div class="header">
 	        <div class="container" id="header">
 	            <div class="align-items product-search">
-	                <h2>All Products</h2>
+	                <h1 style="color: #303937">All Products</h1>
 	                <div class="form-control">
 	                    <form class="hotdog light" id="product-search">
 	                        <input type="search" placeholder="Search Products">
@@ -37,8 +37,8 @@
 	                </div>
 	            </div>	            
 
-	            <div class="form-control display-flex">
-	            	<div class="flex-stretch display-flex filter-row">
+	            <div class="form-control display-flex" style="flex-wrap: wrap">
+	            	<div class="flex-stretch display-flex filter-row" style="flex-wrap: wrap">
 			           	<div class="flex-none">
 			           		<button data-filter="category" data-value="" type="button" class="form-button card soft flat" style="background-color: #FCFCFC; color: #FF7506; font-weight: 400; line-height: 1.2; border: 1px solid;">All</button>
 			           	</div>

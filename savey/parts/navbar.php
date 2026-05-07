@@ -1,9 +1,10 @@
-<? php
+<?php
 
 include_once "lib/php/functions.php";
 
 ?>
 
+<input type="checkbox" id="menu" class="hidden">
 <header class="navbar sticky-nav">
 	<div class="container display-flex">
 		<div class="flex-none logo">
@@ -13,6 +14,9 @@ include_once "lib/php/functions.php";
 		</div>
 
 		<div class="flex-stretch"></div>
+		<div class="flex-none menu-button">
+			<label for="menu">&equiv;</label>
+		</div>
 		<nav class="flex-none nav">
 			<ul class="container display-flex">
 				<?php $page = basename($_SERVER['PHP_SELF']); ?>
@@ -23,7 +27,7 @@ include_once "lib/php/functions.php";
 
 					</a></li>
 				<li class="<?= $page=='about.php' ? 'active' : '' ?>" style="padding: 0 1em"><a href="about.php">About</a></li>
-				<li class="<?= $page=='help.php' ? 'active' : '' ?>" style="padding: 0 1em"><a href="help.php">Help</a></li>
+				<li class="<?= $page=='faq.php' ? 'active' : '' ?>" style="padding: 0 1em"><a href="faq.php">FAQ</a></li>
 			</ul>
 		</nav>
 	</div>

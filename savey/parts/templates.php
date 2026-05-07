@@ -150,9 +150,9 @@ function recommendedSimilar($cat, $id=0, $limit=3) {
         FROM `products`
         WHERE `category`='$cat'
         AND `id`<>$id
-        ORDER BY RAND ()
+        ORDER BY RAND()
         LIMIT $limit
         "
     );
-    echo "<div style='display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em;' class='similar-grid'>", array_reduce($result, 'productlistTemplate'), "</div>";
+    echo "<div style='display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1em;' class='similar-grid'>", array_reduce($result, 'productlistTemplate'), "</div>";
 }

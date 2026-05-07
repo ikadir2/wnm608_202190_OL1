@@ -30,16 +30,142 @@ body{
 	}
 }
 
-@media (max-width: 400px){
+.menu-button label{ display: none;}
+
+@media (max-width: 768px){
 	.navbar .display-flex{
+		flex-wrap: wrap;
+	}
+
+	.navbar .nav{
+		width: 100%;
+		display: none;
+	}
+
+	.navbar .nav-flex ul{
 		display: block;
 	}
 
 	.navbar .nav li{
 		line-height: 2em;
 	}
+
+	.nav {
+        width: 100%;
+    }
+    
+    .nav ul {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+
+	.menu-button label{
+		display: block;
+		font-size: 32px;
+		padding: 8px 8px;
+		cursor: pointer;
+        display: flex;
+        align-items: center;
+	}
+
+	.navbar .container.display-flex {
+    	align-items: center;
+	}
+
+	#menu:checked+.navbar .nav{
+		display: block;
+		padding-bottom: 20px;
+	}
+
+	.product-item .col-xs-12{
+        margin-bottom: 35px;
+    }
+
+    .about-header {
+        padding-top: 5px !important;
+        padding-bottom: 40px !important;
+        text-align: center
+    }
+
+    .mission h1 {
+        margin-top: 2px;
+        text-align: center
+    }
+
+    .mission p {
+        text-align: center
+    }
+
+    .faq {
+        padding-top: 5px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .hero-title {
+        font-size: 36px;
+        line-height: 48px;
+     }
+
+    .how-it-works-item {
+        max-width: 100%;
+    }
+
+    .page-cart-content {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	h2.header-section-home {
+        text-align: center;
+        width: 100%;
+    }
+
+    .header-section-home-wrapper {
+        justify-content: center !important;
+    }
+
+    .onboarding{
+    	padding-left: 25px;
+    	padding-right: 25px;
+    }
+
+    .onboarding{
+    	padding-left: 25px;
+    	padding-right: 25px;
+    }
 }
 
+input#menu {
+    display: none;
+}
+
+.impact-figure {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    padding-bottom: 20px;
+    }
+
+    .how-it-works-grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .how-it-works-item {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 60px;
+        line-height: 70px;
+    }
+}
 
 
 /* STYLEGUIDE HTML */
@@ -374,11 +500,12 @@ body{
 
 
 /* LANDING PAGE */
-.landing-page{
-	position: relative; 
-	width: 100vw; 
-	height: 100vh; 
-	overflow: hidden;
+.landing-page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
 .landing-page .hero{
@@ -427,3 +554,15 @@ body{
     from { opacity: 1; }
     to { opacity: 0; }
 }
+
+@media (max-width: 768px) {
+    .landing-page .hero-content h1 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+}
+
+
+/* FAQ */
+.faq-q { font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 500; color: #303937; transition: color 0.2s; }
+.faq-body p { font-family: 'Poppins', sans-serif; font-size: 15px; color: #6D7473; line-height: 1.7; margin: 0; padding-bottom: 20px; }

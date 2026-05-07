@@ -38,7 +38,7 @@ resetCart();
 
 					<div class="card flat" style="background-color: #FFF0E4; padding: 30px;">
 						<div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 30px">
-							<h5 style="font-weight: 600; color: #FF7506; margin: 0;">Add Before We Ship Your Order</h5>
+							<h5 style="font-weight: 600; color: #FF7506; margin: 0;">Add More Before We Ship Yours</h5>
 
 							<div class="form-control">
 								<a href="product_list.php" style="text-decoration: none;">
