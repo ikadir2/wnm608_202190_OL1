@@ -3,16 +3,16 @@
 include "../lib/php/functions.php";
 
 $empty_product = (object)[
-	"name"=>"Pocky Choco Banana",
-	"brand"=>"Glico",
-	"price"=>"0.50",
-	"category"=>"snack",
-	"expiry_date"=>"2026-05-3",
-	"description"=>"Two delicious flavors come together in one sweet snack. A light cocoa biscuit stick is dipped in smooth banana cream, making Pocky Banana a tasty treat to brighten your day or a friend’s.",
-	"ingredients"=>"Wheat flour, sugar, vegetable oils (palm kernel, palm, rapeseed), lactose, whole milk powder, palm oil shortening, cocoa powder, less than 1% of: artificial flavors, banana powder, lecithin, salt, yeast, leavening (sodium bicarbonate), sodium hydroxide, beta-carotene color, papain.",
-	"thumbnail"=>"snack_pocky_banana_thumb.jpg",
-	"images"=>"snack_pocky_banana_1.jpg,snack_pocky_banana_2.jpg",
-	"inventory_qty"=>"100"
+	"name"=>"",
+    "brand"=>"",
+    "price"=>"",
+    "category"=>"",
+    "expiry_date"=>"",
+    "description"=>"",
+    "ingredients"=>"",
+    "thumbnail"=>"",
+    "images"=>"",
+    "inventory_qty"=>""
 ];
 
 
